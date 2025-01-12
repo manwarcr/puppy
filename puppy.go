@@ -1,6 +1,8 @@
 package puppy
 
 import (
+	"fmt"
+
 	"github.com/manwarcr/dog"
 )
 
@@ -12,6 +14,14 @@ func Barks() string {
 	return "Woof! Woof! Woof!"
 }
 
-func BigBark(s string) string {
-	return dog.WhenGrownUp(s)
+func BigBark() string {
+	return dog.WhenGrownUp(Bark())
+}
+
+func BigBarks() string {
+	return dog.WhenGrownUp(Barks())
+}
+
+func from11() {
+	fmt.Println("I'm V1.1.0")
 }
